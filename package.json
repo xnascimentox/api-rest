@@ -1,5 +1,5 @@
 {
-  "name": "api1",
+  "name": "api-vendas",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -33,6 +33,6 @@
     "express-async-errors": "^3.1.1",
     "pg": "^8.7.3",
     "reflect-metadata": "^0.1.13",
-    "typeorm": "^0.3.6"
+    "typeorm": "0.2"
   }
 }
