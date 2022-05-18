@@ -1,17 +1,17 @@
-import { MigrationInterface, QueryRunner, Table } from "typeorm"
+import {MigrationInterface, QueryRunner, Table} from "typeorm";
 
-export class CreateProducts1652371431275 implements MigrationInterface {
-  public async up(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.createTable(
-      new Table({
+export class CreationProducts1652897634124 implements MigrationInterface {
+
+    public async up(queryRunner: QueryRunner): Promise<void> {
+      await queryRunner.createTable(new Table({
         name: 'products',
         columns: [
           {
             name: 'id',
             type: 'uuid',
             isPrimary: true,
-            generationStrategy: 'uuid',
-            default: 'uuid_generate_v4()',
+            generationStrategy:'uuid',
+            default:'uuid_generate_v4()',
           },
           {
             name: 'name',
@@ -19,7 +19,7 @@ export class CreateProducts1652371431275 implements MigrationInterface {
           },
           {
             name: 'price',
-            type: 'decimal',
+            type: 'dcimal',
             precision: 10,
             scale: 2,
           },
@@ -33,16 +33,17 @@ export class CreateProducts1652371431275 implements MigrationInterface {
             default: 'now()',
           },
           {
-            name: 'updated_at',
+            name: 'update_at',
             type: 'timestamp',
             default: 'now()',
-          },
+          }
         ],
       }),
-    );
-  }
+      );
+    }
 
-  public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('products');
-  }
+    public async down(queryRunner: QueryRunner): Promise<void> {
+      await queryRunner.dropTable('products');
+    }
+
 }
