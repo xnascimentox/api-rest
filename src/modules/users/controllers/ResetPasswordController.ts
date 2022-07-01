@@ -1,4 +1,5 @@
 import{Request, Response} from "express";
+
 import ResetPasswordService from "../services/ResetPasswordService";
 
 export default class ForgotPasswordController {

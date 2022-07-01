@@ -26,5 +26,4 @@ routes.use('/profile', profileRouter);
 
 routes.use('/customers', customersRouter);
 
-
 export default routes;
